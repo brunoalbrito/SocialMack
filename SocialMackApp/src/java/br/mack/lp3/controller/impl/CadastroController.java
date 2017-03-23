@@ -17,6 +17,9 @@ public class CadastroController extends AbstractController {
 
     ParticipanteDAO participanteDAO = lookupParticipanteDAOBean();
 
+    
+    
+
     @Override
     public void execute() {
         System.out.println("FUNCIONOU");
@@ -40,11 +43,13 @@ public class CadastroController extends AbstractController {
     private ParticipanteDAO lookupParticipanteDAOBean() {
         try {
             Context c = new InitialContext();
-            return (ParticipanteDAO) c.lookup("java:global/SocialMack/ParticipanteDAO!br.mack.lp3.persistence.ParticipanteDAO");
+            return (ParticipanteDAO) c.lookup("java:global/SocialMackApp/ParticipanteDAO!br.mack.lp3.persistence.ParticipanteDAO");
         } catch (NamingException ne) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", ne);
             throw new RuntimeException(ne);
         }
     }
+
+
 
 }

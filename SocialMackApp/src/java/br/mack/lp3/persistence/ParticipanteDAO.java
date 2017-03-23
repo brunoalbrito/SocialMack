@@ -17,7 +17,7 @@ import javax.persistence.Query;
 @Stateful
 public class ParticipanteDAO implements GenericDAO<Participante> {
     
-    @PersistenceContext(unitName = "SocialMackPU", type = PersistenceContextType.EXTENDED)
+    @PersistenceContext(unitName = "SocialMackAppPU", type = PersistenceContextType.EXTENDED)
     private EntityManager em;
     
     @Override

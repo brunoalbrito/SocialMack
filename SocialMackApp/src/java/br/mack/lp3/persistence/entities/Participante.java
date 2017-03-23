@@ -20,7 +20,7 @@ public class Participante implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 //    Renomear a coluna
 //    @Column(name = "chavinha")
-    private long id_userlp3;
+    private long id_participante;
     
 //    Precisa para data
 //    @Temporal(TemporalType.DATE)
@@ -39,10 +39,10 @@ public class Participante implements Serializable{
         this.email = email;
     }
 
-    public Participante(String nome, String email, long id_userlp3) {
+    public Participante(String nome, String email, long id_participante) {
         this.nome = nome;
         this.email = email;
-        this.id_userlp3 = id_userlp3;
+        this.id_participante = id_participante;
     }
 
     public String getNome() {
@@ -62,15 +62,15 @@ public class Participante implements Serializable{
     }
 
     public long getId_userlp3() {
-        return id_userlp3;
+        return id_participante;
     }
 
-    public void setId_userlp3(long id_userlp3) {
-        this.id_userlp3 = id_userlp3;
+    public void setId_userlp3(long id_participante) {
+        this.id_participante = id_participante;
     }
 
     @Override
     public String toString() {
-        return "UserLP3{" + "nome=" + nome + ", email=" + email + ", id_userlp3=" + id_userlp3 + '}';
+        return "UserLP3{" + "nome=" + nome + ", email=" + email + ", id_participante=" + id_participante + '}';
     }
 }

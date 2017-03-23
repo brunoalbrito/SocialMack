@@ -1,8 +1,8 @@
-Wed Mar 22 13:29:37 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
+Thu Mar 23 11:28:06 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
 ----------------------------------------------------------------
-Wed Mar 22 13:29:38 BRT 2017:
- Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015a-f6da-2caf-ffff900980ce
-no diretório de banco de dados C:\Temp\SocialMack\db\socialmack 
+Thu Mar 23 11:28:06 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015a-fb91-4766-000032592bf2
+no diretório de banco de dados C:\Temp\SocialMack\SocialMackApp\db\SocialMack 
 
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_101-b13
@@ -10,33 +10,16 @@ user.dir=C:\Program Files\glassfish-4.1.1\javadb
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
-derby.system.home=C:\Temp\SocialMack\db
+derby.system.home=C:\Temp\SocialMack\SocialMackApp\db
 Carregador de classe do banco de dados iniciado - derby.database.classpath=''
-----------------------------------------------------------------
-Wed Mar 22 13:29:49 BRT 2017:
-Encerrando a instância a816c00e-015a-f6da-2caf-ffff900980ce
-Wed Mar 22 13:29:49 BRT 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = socialmack), (DRDAID = {2}), Banco de dados 'socialmack' fechado.
-----------------------------------------------------------------
-Wed Mar 22 13:33:59 BRT 2017:
- Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância 560740aa-015a-f6da-2caf-ffff900980ce
-no diretório de banco de dados C:\Temp\SocialMack\db\socialmack 
-
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_101-b13
-user.dir=C:\Program Files\glassfish-4.1.1\javadb
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
-derby.system.home=C:\Temp\SocialMack\db
-Carregador de classe do banco de dados iniciado - derby.database.classpath=''
-Wed Mar 22 13:41:34 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
-java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:28:08 BRT 2017 Thread[DRDAConnThread_2,5,main] (XID = 452), (SESSIONID = 0), (DATABASE = SocialMack), (DRDAID = {1}), Cleanup action starting
+java.sql.SQLNonTransientConnectionException: Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
 	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
@@ -50,12 +33,12 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
 	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
+Caused by: java.sql.SQLException: Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	... 19 more
 ============= begin nested exception, level (1) ===========
-java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
+java.sql.SQLException: Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
@@ -63,7 +46,7 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
 	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
@@ -79,117 +62,15 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Wed Mar 22 13:41:34 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {108}), Banco de dados 'db_lp3' não encontrado.
-Wed Mar 22 13:46:39 BRT 2017 Thread[DRDAConnThread_9,5,main] Cleanup action starting
-java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.Driver20.connect(Unknown Source)
-	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 19 more
-============= begin nested exception, level (1) ===========
-java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.Driver20.connect(Unknown Source)
-	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-============= end nested exception, level (1) ===========
-Cleanup action completed
-Wed Mar 22 13:46:39 BRT 2017 Thread[DRDAConnThread_9,5,main] (DATABASE = db_lp3), (DRDAID = {116}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:28:08 BRT 2017 Thread[DRDAConnThread_2,5,main] (DATABASE = SocialMack), (DRDAID = {1}), Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
 ----------------------------------------------------------------
-Wed Mar 22 13:51:04 BRT 2017:
-Encerrando a instância 560740aa-015a-f6da-2caf-ffff900980ce
-Wed Mar 22 13:51:04 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = socialmack), (DRDAID = {123}), Banco de dados 'socialmack' fechado.
-Wed Mar 22 13:51:41 BRT 2017 Thread[DRDAConnThread_3,5,main] Cleanup action starting
-java.sql.SQLException: Banco de dados 'socialmack' não encontrado.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.Driver20.connect(Unknown Source)
-	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: java.sql.SQLException: Banco de dados 'socialmack' não encontrado.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 19 more
-============= begin nested exception, level (1) ===========
-java.sql.SQLException: Banco de dados 'socialmack' não encontrado.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.Driver20.connect(Unknown Source)
-	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-============= end nested exception, level (1) ===========
-Cleanup action completed
-Wed Mar 22 13:51:41 BRT 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = socialmack), (DRDAID = {124}), Banco de dados 'socialmack' não encontrado.
+Thu Mar 23 11:39:31 BRT 2017:
+Encerrando a instância a816c00e-015a-fb91-4766-000032592bf2
+Thu Mar 23 11:39:31 BRT 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = SocialMack), (DRDAID = {19}), Banco de dados 'SocialMack' fechado.
 ----------------------------------------------------------------
-Wed Mar 22 13:52:50 BRT 2017:
- Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância d884816c-015a-f6da-2caf-ffff900980ce
-no diretório de banco de dados C:\Temp\SocialMack\db\SocialMack 
+Thu Mar 23 11:39:52 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância 74f380f4-015a-fb91-4766-000032592bf2
+no diretório de banco de dados C:\Temp\SocialMack\SocialMackApp\db\SocialMack 
 
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_101-b13
@@ -197,16 +78,16 @@ user.dir=C:\Program Files\glassfish-4.1.1\javadb
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
-derby.system.home=C:\Temp\SocialMack\db
+derby.system.home=C:\Temp\SocialMack\SocialMackApp\db
 Carregador de classe do banco de dados iniciado - derby.database.classpath=''
 ----------------------------------------------------------------
-Wed Mar 22 13:52:57 BRT 2017:
-Encerrando a instância d884816c-015a-f6da-2caf-ffff900980ce
-Wed Mar 22 13:52:57 BRT 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = SocialMack), (DRDAID = {126}), Banco de dados 'SocialMack' fechado.
+Thu Mar 23 11:40:04 BRT 2017:
+Encerrando a instância 74f380f4-015a-fb91-4766-000032592bf2
+Thu Mar 23 11:40:04 BRT 2017 Thread[DRDAConnThread_5,5,main] (DATABASE = SocialMack), (DRDAID = {21}), Banco de dados 'SocialMack' fechado.
 ----------------------------------------------------------------
-Wed Mar 22 13:52:58 BRT 2017:
- Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância bbc70208-015a-f6da-2caf-ffff900980ce
-no diretório de banco de dados C:\Temp\SocialMack\db\SocialMack 
+Thu Mar 23 11:43:35 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância 45ee0190-015a-fb91-4766-000032592bf2
+no diretório de banco de dados C:\Temp\SocialMack\SocialMackApp\db\SocialMack 
 
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_101-b13
@@ -214,5 +95,39 @@ user.dir=C:\Program Files\glassfish-4.1.1\javadb
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
-derby.system.home=C:\Temp\SocialMack\db
+derby.system.home=C:\Temp\SocialMack\SocialMackApp\db
+Carregador de classe do banco de dados iniciado - derby.database.classpath=''
+----------------------------------------------------------------
+Thu Mar 23 11:49:50 BRT 2017:
+Encerrando a instância 45ee0190-015a-fb91-4766-000032592bf2
+Thu Mar 23 11:49:50 BRT 2017 Thread[DRDAConnThread_7,5,main] (DATABASE = SocialMack), (DRDAID = {23}), Banco de dados 'SocialMack' fechado.
+----------------------------------------------------------------
+Thu Mar 23 11:50:53 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância 9d0881b5-015a-fb91-4766-000032592bf2
+no diretório de banco de dados C:\Temp\SocialMack\SocialMackApp\db\SocialMack 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_101-b13
+user.dir=C:\Program Files\glassfish-4.1.1\javadb
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Temp\SocialMack\SocialMackApp\db
+Carregador de classe do banco de dados iniciado - derby.database.classpath=''
+----------------------------------------------------------------
+Thu Mar 23 11:51:00 BRT 2017:
+Encerrando a instância 9d0881b5-015a-fb91-4766-000032592bf2
+Thu Mar 23 11:51:00 BRT 2017 Thread[DRDAConnThread_10,5,main] (DATABASE = SocialMack), (DRDAID = {25}), Banco de dados 'SocialMack' fechado.
+----------------------------------------------------------------
+Thu Mar 23 11:52:04 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância 2b6a0251-015a-fb91-4766-000032592bf2
+no diretório de banco de dados C:\Temp\SocialMack\SocialMackApp\db\SocialMack 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_101-b13
+user.dir=C:\Program Files\glassfish-4.1.1\javadb
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Temp\SocialMack\SocialMackApp\db
 Carregador de classe do banco de dados iniciado - derby.database.classpath=''
