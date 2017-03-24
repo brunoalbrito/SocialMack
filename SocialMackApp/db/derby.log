@@ -1,14 +1,14 @@
-Fri Mar 24 08:43:31 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
+Fri Mar 24 14:50:34 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
 ----------------------------------------------------------------
-Fri Mar 24 08:43:31 BRT 2017:
- Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015b-0020-f2a1-ffffc74c5aa5
-no diretório de banco de dados C:\Temp\SocialMack\SocialMack\SocialMackApp\db\SocialMack 
+Fri Mar 24 14:50:47 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015b-0171-001d-000032592bf2
+no diretório de banco de dados C:\Temp\SocialMack\SocialMackApp\db\SocialMack 
 
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_101-b13
-user.dir=C:\Program Files\glassfish-4.1.1\javadb
+user.dir=C:\glassfish\javadb
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
-derby.system.home=C:\Temp\SocialMack\SocialMack\SocialMackApp\db
+derby.system.home=C:\Temp\SocialMack\SocialMackApp\db
 Carregador de classe do banco de dados iniciado - derby.database.classpath=''
