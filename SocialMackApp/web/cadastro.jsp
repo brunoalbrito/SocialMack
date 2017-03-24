@@ -14,7 +14,7 @@
                     <br/>
                     <input type="text" name="email" title="Digite o endereço de e-mail." placeholder="E-mail" required="required" class="form-control input-lg">
                     <br/>
-                    <input type="hidden" value="Cadastro">
+                    <input type="hidden" value="Cadastro" name="ctrl">
                     <input type="submit" value="CADASTRAR" class="btn btn-default btn-lg center-block">
                 </form>
                 
