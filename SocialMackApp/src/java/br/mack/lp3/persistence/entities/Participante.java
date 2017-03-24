@@ -61,16 +61,18 @@ public class Participante implements Serializable{
         this.email = email;
     }
 
-    public long getId_userlp3() {
+    public long getId_participante() {
         return id_participante;
     }
 
-    public void setId_userlp3(long id_participante) {
+    public void setId_participante(long id_participante) {
         this.id_participante = id_participante;
     }
 
+    
+
     @Override
     public String toString() {
-        return "UserLP3{" + "nome=" + nome + ", email=" + email + ", id_participante=" + id_participante + '}';
+        return "Participante{" + "nome=" + nome + ", email=" + email + ", id_participante=" + id_participante + '}';
     }
 }

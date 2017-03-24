@@ -16,5 +16,6 @@
         <h1><a href="index.jsp">SUCESSO!</a></h1>
         <c:out value="${user}"></c:out></br>
         <a style="text-decoration: none;" href="editar.jsp"><button type="hidden" name="ctrl" value="Listar"/>Alterar</a>
+        <a style="text-decoration: none;" href="FrontController?ctrl=ListarPalestra"><button type="hidden" name="ctrl" value="Listar Palestras"/>Listar Palestras</a>
     </body>
 </html>

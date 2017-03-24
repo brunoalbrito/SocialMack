@@ -28,7 +28,5 @@
                 <input type="submit" value="Cadastrar"/>
             </p>
         </form>
-        
-        
     </body>
 </html>
