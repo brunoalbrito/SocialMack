@@ -1,6 +1,7 @@
 package br.mack.lp3.controller.impl;
 
 import br.mack.lp3.controller.AbstractController;
+import br.mack.lp3.persistence.PalestraDAO;
 import br.mack.lp3.persistence.ParticipanteDAO;
 import br.mack.lp3.persistence.entities.Participante;
 import java.util.logging.Level;
@@ -15,11 +16,29 @@ import javax.naming.NamingException;
  */
 public class CadastroController extends AbstractController {
 
-    ParticipanteDAO participanteDAO = lookupParticipanteDAOBean();
+    PalestraDAO palestraDAO = lookupPalestraDAOBean();
+    ParticipanteDAO participanteDAO = lookupParticipanteDAOBean();   
 
-    
-    
+    private ParticipanteDAO lookupParticipanteDAOBean() {
+        try {
+            Context c = new InitialContext();
+            return (ParticipanteDAO) c.lookup("java:global/SocialMackApp/ParticipanteDAO!br.mack.lp3.persistence.ParticipanteDAO");
+        } catch (NamingException ne) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", ne);
+            throw new RuntimeException(ne);
+        }
+    }
 
+    private PalestraDAO lookupPalestraDAOBean() {
+        try {
+            Context c = new InitialContext();
+            return (PalestraDAO) c.lookup("java:global/SocialMackApp/PalestraDAO!br.mack.lp3.persistence.PalestraDAO");
+        } catch (NamingException ne) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", ne);
+            throw new RuntimeException(ne);
+        }
+    }
+    
     @Override
     public void execute() {
         System.out.println("FUNCIONOU");
@@ -37,18 +56,14 @@ public class CadastroController extends AbstractController {
         }
 
         System.out.println(name + " - " + email);
-        this.setReturnPage("sucesso.jsp");
+        try {
+            this.getRequest().getSession().setAttribute("palestras", palestraDAO.readAll());
+        } catch (Exception ex) {
+            Logger.getLogger(CadastroController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.setReturnPage("user_area/lista_palestras.jsp");
     }
 
-    private ParticipanteDAO lookupParticipanteDAOBean() {
-        try {
-            Context c = new InitialContext();
-            return (ParticipanteDAO) c.lookup("java:global/SocialMackApp/ParticipanteDAO!br.mack.lp3.persistence.ParticipanteDAO");
-        } catch (NamingException ne) {
-            Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", ne);
-            throw new RuntimeException(ne);
-        }
-    }
 
 
 

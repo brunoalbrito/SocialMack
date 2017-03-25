@@ -1,14 +1,48 @@
-Fri Mar 24 08:43:31 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
+Fri Mar 24 18:38:19 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
 ----------------------------------------------------------------
-Fri Mar 24 08:43:31 BRT 2017:
- Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015b-0020-f2a1-ffffc74c5aa5
-no diretório de banco de dados C:\Temp\SocialMack\SocialMack\SocialMackApp\db\SocialMack 
+Fri Mar 24 18:38:20 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015b-0241-8454-000032592bf2
+no diretório de banco de dados C:\Temp\SocialMack\SocialMackApp\db\SocialMack 
 
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_101-b13
-user.dir=C:\Program Files\glassfish-4.1.1\javadb
+user.dir=C:\glassfish\javadb
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
-derby.system.home=C:\Temp\SocialMack\SocialMack\SocialMackApp\db
+derby.system.home=C:\Temp\SocialMack\SocialMackApp\db
+Carregador de classe do banco de dados iniciado - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Mar 24 18:41:22 BRT 2017:
+Encerrando a instância a816c00e-015b-0241-8454-000032592bf2
+Fri Mar 24 18:41:22 BRT 2017 Thread[DRDAConnThread_10,5,main] (DATABASE = SocialMack), (DRDAID = {9}), Banco de dados 'SocialMack' fechado.
+----------------------------------------------------------------
+Fri Mar 24 18:41:35 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância c0f7802d-015b-0241-8454-000032592bf2
+no diretório de banco de dados C:\Temp\SocialMack\SocialMackApp\db\SocialMack 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_101-b13
+user.dir=C:\glassfish\javadb
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Temp\SocialMack\SocialMackApp\db
+Carregador de classe do banco de dados iniciado - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Mar 24 18:41:47 BRT 2017:
+Encerrando a instância c0f7802d-015b-0241-8454-000032592bf2
+Fri Mar 24 18:41:47 BRT 2017 Thread[DRDAConnThread_10,5,main] (DATABASE = SocialMack), (DRDAID = {11}), Banco de dados 'SocialMack' fechado.
+----------------------------------------------------------------
+Fri Mar 24 18:41:53 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância 13a100c9-015b-0241-8454-000032592bf2
+no diretório de banco de dados C:\Temp\SocialMack\SocialMackApp\db\SocialMack 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_101-b13
+user.dir=C:\glassfish\javadb
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Temp\SocialMack\SocialMackApp\db
 Carregador de classe do banco de dados iniciado - derby.database.classpath=''
